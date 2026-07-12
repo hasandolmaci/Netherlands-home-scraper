@@ -9,7 +9,7 @@ def kamernet_scrape(city):
 
     response = requests.get(url).text
     doc = BeautifulSoup(response, "html.parser")
-    roomscontainer = doc.find_all(class_="SearchResultGrid_root__11Exb SearchResultGrid_responsive__pL2eC")
+    roomscontainer = doc.find(class_="SearchResultGrid_root__11Exb SearchResultGrid_responsive__pL2eC")
     rooms = roomscontainer.find_all("a")
    
 
